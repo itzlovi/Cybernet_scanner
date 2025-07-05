@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #00D4FF; /* Electric cyan - primary actions */
+    --color-primary-50: #E6F9FF; /* Very light cyan */
+    --color-primary-100: #CCF3FF; /* Light cyan */
+    --color-primary-200: #99E7FF; /* Medium light cyan */
+    --color-primary-300: #66DBFF; /* Medium cyan */
+    --color-primary-400: #33CFFF; /* Medium dark cyan */
+    --color-primary-500: #00D4FF; /* Base primary cyan */
+    --color-primary-600: #00A3CC; /* Dark cyan */
+    --color-primary-700: #007299; /* Darker cyan */
+    --color-primary-800: #004166; /* Very dark cyan */
+    --color-primary-900: #001033; /* Deepest cyan */
+
+    /* Secondary Colors */
+    --color-secondary: #0A84FF; /* Professional blue */
+    --color-secondary-50: #E6F2FF; /* Very light blue */
+    --color-secondary-100: #CCE5FF; /* Light blue */
+    --color-secondary-200: #99CBFF; /* Medium light blue */
+    --color-secondary-300: #66B1FF; /* Medium blue */
+    --color-secondary-400: #3397FF; /* Medium dark blue */
+    --color-secondary-500: #0A84FF; /* Base secondary blue */
+    --color-secondary-600: #0866CC; /* Dark blue */
+    --color-secondary-700: #064999; /* Darker blue */
+    --color-secondary-800: #042B66; /* Very dark blue */
+    --color-secondary-900: #020E33; /* Deepest blue */
+
+    /* Accent Colors */
+    --color-accent: #FF2D92; /* Vibrant magenta */
+    --color-accent-50: #FFE6F2; /* Very light magenta */
+    --color-accent-100: #FFCCE5; /* Light magenta */
+    --color-accent-200: #FF99CB; /* Medium light magenta */
+    --color-accent-300: #FF66B1; /* Medium magenta */
+    --color-accent-400: #FF3397; /* Medium dark magenta */
+    --color-accent-500: #FF2D92; /* Base accent magenta */
+    --color-accent-600: #CC2475; /* Dark magenta */
+    --color-accent-700: #991B58; /* Darker magenta */
+    --color-accent-800: #66123B; /* Very dark magenta */
+    --color-accent-900: #33091E; /* Deepest magenta */
+
+    /* Background Colors */
+    --color-background: #0A0A0F; /* Deep space blue-black */
+    --color-surface: #1A1A2E; /* Elevated dark surface */
+    --color-surface-50: #F5F5F7; /* Very light surface */
+    --color-surface-100: #EBEBEF; /* Light surface */
+    --color-surface-200: #D7D7DF; /* Medium light surface */
+    --color-surface-300: #C3C3CF; /* Medium surface */
+    --color-surface-400: #AFAFBF; /* Medium dark surface */
+    --color-surface-500: #9B9BAF; /* Base surface */
+    --color-surface-600: #7C7C8C; /* Dark surface */
+    --color-surface-700: #5D5D69; /* Darker surface */
+    --color-surface-800: #3E3E46; /* Very dark surface */
+    --color-surface-900: #1F1F23; /* Deepest surface */
+
+    /* Text Colors */
+    --color-text-primary: #E0E6ED; /* High-contrast light gray */
+    --color-text-secondary: #8B949E; /* Muted gray */
+    --color-text-50: #FAFBFC; /* Very light text */
+    --color-text-100: #F6F8FA; /* Light text */
+    --color-text-200: #E1E4E8; /* Medium light text */
+    --color-text-300: #D1D5DA; /* Medium text */
+    --color-text-400: #959DA5; /* Medium dark text */
+    --color-text-500: #6A737D; /* Base text */
+    --color-text-600: #586069; /* Dark text */
+    --color-text-700: #444D56; /* Darker text */
+    --color-text-800: #2F363D; /* Very dark text */
+    --color-text-900: #1B1F23; /* Deepest text */
+
+    /* Status Colors */
+    --color-success: #39FF14; /* Bright matrix green */
+    --color-success-50: #EEFFEB; /* Very light green */
+    --color-success-100: #DDFFDD; /* Light green */
+    --color-success-200: #BBFFBB; /* Medium light green */
+    --color-success-300: #99FF99; /* Medium green */
+    --color-success-400: #77FF77; /* Medium dark green */
+    --color-success-500: #39FF14; /* Base success green */
+    --color-success-600: #2ECC10; /* Dark green */
+    --color-success-700: #23990C; /* Darker green */
+    --color-success-800: #186608; /* Very dark green */
+    --color-success-900: #0D3304; /* Deepest green */
+
+    --color-warning: #FFD700; /* Electric gold */
+    --color-warning-50: #FFFEF0; /* Very light gold */
+    --color-warning-100: #FFFDE1; /* Light gold */
+    --color-warning-200: #FFFBC3; /* Medium light gold */
+    --color-warning-300: #FFF9A5; /* Medium gold */
+    --color-warning-400: #FFF787; /* Medium dark gold */
+    --color-warning-500: #FFD700; /* Base warning gold */
+    --color-warning-600: #CCAC00; /* Dark gold */
+    --color-warning-700: #998100; /* Darker gold */
+    --color-warning-800: #665600; /* Very dark gold */
+    --color-warning-900: #332B00; /* Deepest gold */
+
+    --color-error: #FF073A; /* Intense red */
+    --color-error-50: #FFE6EA; /* Very light red */
+    --color-error-100: #FFCCD5; /* Light red */
+    --color-error-200: #FF99AB; /* Medium light red */
+    --color-error-300: #FF6681; /* Medium red */
+    --color-error-400: #FF3357; /* Medium dark red */
+    --color-error-500: #FF073A; /* Base error red */
+    --color-error-600: #CC062E; /* Dark red */
+    --color-error-700: #990423; /* Darker red */
+    --color-error-800: #660317; /* Very dark red */
+    --color-error-900: #33010C; /* Deepest red */
+
+    /* Glow Effects */
+    --glow-primary: 0 0 20px rgba(0, 212, 255, 0.3);
+    --glow-secondary: 0 0 20px rgba(10, 132, 255, 0.3);
+    --glow-accent: 0 0 20px rgba(255, 45, 146, 0.3);
+    --glow-success: 0 0 20px rgba(57, 255, 20, 0.3);
+    --glow-warning: 0 0 20px rgba(255, 215, 0, 0.3);
+    --glow-error: 0 0 20px rgba(255, 7, 58, 0.3);
+  }
+
+  * {
+    border-color: theme('colors.surface.800');
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-caption {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .glow-success {
+    box-shadow: var(--glow-success);
+  }
+
+  .glow-warning {
+    box-shadow: var(--glow-warning);
+  }
+
+  .glow-error {
+    box-shadow: var(--glow-error);
+  }
+
+  .cyber-border {
+    border: 1px solid rgba(0, 212, 255, 0.3);
+  }
+
+  .cyber-border-accent {
+    border: 1px solid rgba(255, 45, 146, 0.3);
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-data-stream {
+    animation: data-stream 3s linear infinite;
+  }
+
+  .animate-scan-progress {
+    animation: scan-progress 4s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .backdrop-blur-cyber {
+    backdrop-filter: blur(8px) saturate(180%);
+  }
+
+  .transition-cyber {
+    transition: all 200ms ease-in-out;
+  }
+
+  .transition-glow {
+    transition: box-shadow 300ms ease-in-out;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    box-shadow: 0 0 5px currentColor;
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 20px currentColor;
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes scan-progress {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-glow,
+  .animate-data-stream,
+  .animate-scan-progress {
+    animation: none;
+  }
+}
